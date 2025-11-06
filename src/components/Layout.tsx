@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import { useCartStore } from '../stores/cart'
+import { useCartStore } from '@/store/cartStore'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const totalQuantity = useCartStore(s => s.totalQuantity)
