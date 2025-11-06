@@ -9,6 +9,7 @@ import CartPage from '@/pages/CartPage'
 import CheckoutPage from '@/pages/CheckoutPage'
 import LoginPage from '@/features/auth/LoginPage'
 import MozoHome from '@/features/menu/MozoHome'
+import MozoPanel from '@/features/orders/MozoPanel'
 import AdminHome from '@/features/orders/AdminHome'
 import AdminCategoriesPage from '@/features/categories/AdminCategoriesPage'
 
@@ -33,6 +34,7 @@ export const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <MozoHome /> },
+      { path: 'panel', element: <MozoPanel /> },
     ],
   },
   {
