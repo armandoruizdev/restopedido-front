@@ -10,6 +10,7 @@ import CheckoutPage from '@/pages/CheckoutPage'
 import LoginPage from '@/features/auth/LoginPage'
 import MozoHome from '@/features/menu/MozoHome'
 import AdminHome from '@/features/orders/AdminHome'
+import AdminCategoriesPage from '@/features/categories/AdminCategoriesPage'
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +44,7 @@ export const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <AdminHome /> },
+      { path: 'categories', element: <AdminCategoriesPage /> },
     ],
   },
 ])
