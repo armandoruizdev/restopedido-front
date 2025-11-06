@@ -10,7 +10,8 @@ export function useLogin() {
 
   return useMutation({
     mutationFn: async (values: LoginInput) => {
-      const { data } = await httpClient.post('/api/auth/login', values)
+      // Sanctum flow: CSRF handled by interceptor; login to /login
+      const { data } = await httpClient.post('/login', values)
       return data
     },
     onSuccess: (data: any) => {
